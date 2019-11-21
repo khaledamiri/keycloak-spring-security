@@ -28,14 +28,14 @@ public class LibraryController {
 
     @GetMapping(value = "/books")
     public String getBooks(Model model) {
-       // configCommonAttributes(model);
+        configCommonAttributes(model);
         model.addAttribute("books", bookRepository.readAll());
         return "books";
     }
 
     @GetMapping(value = "/manager")
     public String getManager(Model model) {
-        //configCommonAttributes(model);
+        configCommonAttributes(model);
         model.addAttribute("books", bookRepository.readAll());
         return "manager";
     }
